@@ -91,7 +91,6 @@ const QMTeams = () => {
               roomClosed
             }
             onClick={() => dispatch(confirmTeamsAndContinue(code))}
-            className="center-stick-bottom"
           >
             Next
           </Button>
