@@ -6,12 +6,14 @@ import Logo from './Logo';
 import Button from './Button';
 
 const Card = ({ title, subtitle, link, button }) => (
-  <div className="card">
-    <h2>{title}</h2>
-    <h3>{subtitle}</h3>
-    <Link to={link}>
-      <Button>{button}</Button>
-    </Link>
+  <div className="bg-qgrey p-5 space-y-10 border-qlight border-2 text-center pt-14">
+    <h2 className="font-badaboombb font-normal text-5xl">{title}</h2>
+    <h3 className="font-semibold text-lg">{subtitle}</h3>
+    <div>
+      <Link to={link}>
+        <Button>{button}</Button>
+      </Link>
+    </div>
   </div>
 );
 
