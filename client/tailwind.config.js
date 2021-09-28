@@ -16,7 +16,7 @@ module.exports = {
         qerror: '#fa8072',
       },
       fontFamily: {
-        sans: [
+        display: [
           '-apple-system',
           'BlinkMacSystemFont',
           '"Segoe UI"',
