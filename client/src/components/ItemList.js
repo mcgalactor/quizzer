@@ -14,7 +14,7 @@ const Item = ({ children, ...props }) => (
   <li
     {...props}
     className={clsx('p-4 cursor-pointer select-none', {
-      'bg-qorange hover:bg-yellow-600': props.selected,
+      'bg-qorange hover:bg-qorange-light': props.selected,
       'hover:bg-gray-600': !props.selected,
     })}
   >

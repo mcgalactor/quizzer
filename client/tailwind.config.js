@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false,
@@ -6,7 +8,10 @@ module.exports = {
       colors: {
         qdark: '#222831',
         qgrey: '#393e46',
-        qorange: '#b55400',
+        qorange: {
+          light: colors.amber['600'],
+          DEFAULT: '#b55400',
+        },
         qlight: '#eeeeee',
         qerror: '#fa8072',
       },
