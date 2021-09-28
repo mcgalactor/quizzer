@@ -1,10 +1,8 @@
 import React from 'react';
+import clsx from 'clsx';
 
-const Logo = ({ fontSize = '6.5em', center }) => (
-  <h1
-    className="font-badaboombb text-8xl select-none"
-    style={{ fontSize, textAlign: center ? 'center' : null }}
-  >
+const Logo = center => (
+  <h1 className={clsx('font-badaboombb text-8xl select-none', center && 'text-center')}>
     Quizzer!
   </h1>
 );

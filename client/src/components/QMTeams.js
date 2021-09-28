@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Container, Row, Col } from 'react-grid-system';
 import { Redirect } from 'react-router-dom';
 
 import Button from './Button';
@@ -26,7 +25,6 @@ const QMTeams = () => {
   const roomClosed = useSelector(state => state.quizzMasterApp.roomClosed);
 
   const actionButtonsDisabled = !teamApplications.length || !selectedTeamApplication || roomClosed;
-  const middleWidth = 3;
 
   if (!code) {
     return <Redirect to="/master" />;
@@ -35,71 +33,63 @@ const QMTeams = () => {
   }
 
   return (
-    <Container className="top-anxiety">
+    <div className="container space-y-8 mx-auto">
       <Logo center />
-      <Row>
-        <Col>
-          <ItemListHeader>Applied Teams</ItemListHeader>
-        </Col>
-        <Col xs={middleWidth}>
-          <ItemListHeader
-            style={{
-              textAlign: 'center',
-              fontSize: '1.2em',
-              fontWeight: '200',
-              position: 'absolute',
-              bottom: 0,
-              left: '50%',
-              transform: 'translate(-50%)',
-              width: '100%',
-            }}
-          >
-            Room code: <b>{code}</b>
-          </ItemListHeader>
-        </Col>
-        <Col>
-          <ItemListHeader>Approved Teams</ItemListHeader>
-        </Col>
-      </Row>
-      <Row style={{ minHeight: '230px' }}>
-        <Col>
-          <ItemList
-            items={teamApplications}
-            show="name"
-            selectable
-            reducer={['quizzMasterApp', 'selectedTeamApplication']}
-            dispatchAs="APPLIED"
-          />
-        </Col>
-        <Col xs={middleWidth} className="button-stack">
-          <Button
-            disabled={actionButtonsDisabled || approvedTeamApplications.length >= 6}
-            onClick={() => dispatch(approveSelectedApplication(selectedTeamApplication, code))}
-          >
-            Approve team
-          </Button>
-          <Button
-            disabled={actionButtonsDisabled}
-            onClick={() => dispatch(rejectSelectedApplication(selectedTeamApplication, code))}
-          >
-            Reject team
-          </Button>
-          <Button
-            disabled={
-              approvedTeamApplications.length < 2 ||
-              approveSelectedApplication.length >= 6 ||
-              roomClosed
-            }
-            onClick={() => dispatch(confirmTeamsAndContinue(code))}
-          >
-            Next
-          </Button>
-        </Col>
-        <Col>
-          <StaticItemList items={approvedTeamApplications} show="name" />
-        </Col>
-      </Row>
-    </Container>
+      <div>
+        <div className="grid grid-cols-qm-selection gap-8">
+          <div>
+            <ItemListHeader>Applied Teams</ItemListHeader>
+          </div>
+          <div className="text-center">
+            <h2 className="pt-6 text-xl">
+              <span className="font-extralight">Room code: </span>
+              <span className="font-normal">{code}</span>
+            </h2>
+          </div>
+          <div>
+            <ItemListHeader>Approved Teams</ItemListHeader>
+          </div>
+        </div>
+        <div className="grid grid-cols-qm-selection gap-8">
+          <div>
+            <ItemList
+              items={teamApplications}
+              show="name"
+              selectable
+              reducer={['quizzMasterApp', 'selectedTeamApplication']}
+              dispatchAs="APPLIED"
+            />
+          </div>
+          <div className="flex flex-col space-y-4">
+            <Button
+              disabled={actionButtonsDisabled || approvedTeamApplications.length >= 6}
+              onClick={() => dispatch(approveSelectedApplication(selectedTeamApplication, code))}
+            >
+              Approve team
+            </Button>
+            <Button
+              disabled={actionButtonsDisabled}
+              onClick={() => dispatch(rejectSelectedApplication(selectedTeamApplication, code))}
+            >
+              Reject team
+            </Button>
+            <Button
+              disabled={
+                approvedTeamApplications.length < 2 ||
+                approveSelectedApplication.length >= 6 ||
+                roomClosed
+              }
+              onClick={() => dispatch(confirmTeamsAndContinue(code))}
+            >
+              Next
+            </Button>
+          </div>
+          <div>
+            <StaticItemList items={approvedTeamApplications} show="name" />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

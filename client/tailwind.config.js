@@ -16,19 +16,10 @@ module.exports = {
         qerror: '#fa8072',
       },
       fontFamily: {
-        display: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'Roboto',
-          'Oxygen',
-          'Cantarell',
-          '"Fira Sans"',
-          '"Droid Sans"',
-          '"Helvetica Neue"',
-          'sans-serif',
-        ],
         badaboombb: '"BadaBoom BB"',
+      },
+      gridTemplateColumns: {
+        'qm-selection': '1fr 25% 1fr',
       },
     },
   },

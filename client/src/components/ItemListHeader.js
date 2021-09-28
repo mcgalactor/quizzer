@@ -2,7 +2,7 @@ import React from 'react';
 
 const ItemListHeader = ({ children, ...rest }) => {
   return (
-    <h2 {...rest} className="p-1 py-4 text-2xl">
+    <h2 {...rest} className="p-1 py-4 text-2xl font-semibold">
       {children}
     </h2>
   );
