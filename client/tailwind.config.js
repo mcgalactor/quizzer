@@ -20,7 +20,7 @@ module.exports = {
         badaboombb: '"BadaBoom BB"',
       },
       gridTemplateColumns: {
-        'qm-selection': '1fr 25% 1fr',
+        'qm-selection': '1fr minmax(min-content, 25%) 1fr',
       },
     },
   },

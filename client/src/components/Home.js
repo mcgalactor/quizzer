@@ -16,7 +16,7 @@ const Card = ({ title, subtitle, link, button }) => (
 
 const Home = () => {
   return (
-    <div className="container space-y-8 mx-auto">
+    <div className="container space-y-4 mx-auto">
       <Logo center />
       <div className="lg:grid lg:grid-cols-3 md:gap-4 lg:gap-7 md:flex flex-col">
         <div className="hidden md:block">

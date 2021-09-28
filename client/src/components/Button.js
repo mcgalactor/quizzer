@@ -8,7 +8,7 @@ const Button = ({ type, disabled = false, children, ...rest }) => {
   return (
     <button
       className={clsx(
-        'bg-qorange w-full px-2 py-4 text-xl font-extrabold select-none border-qgrey border-2 hover:bg-qorange-light',
+        'bg-qorange w-full p-4 text-xl font-extrabold select-none border-qgrey border-2 hover:bg-qorange-light',
         {
           'filter grayscale cursor-not-allowed': disabled,
           'max-w-min px-9': type === 'small',

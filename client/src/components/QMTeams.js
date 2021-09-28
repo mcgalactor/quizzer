@@ -33,7 +33,7 @@ const QMTeams = () => {
   }
 
   return (
-    <div className="container space-y-8 mx-auto">
+    <div className="container space-y-4 mx-auto">
       <Logo center />
       <div>
         <div className="grid grid-cols-qm-selection gap-8">
