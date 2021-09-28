@@ -13,24 +13,26 @@ const App = () => {
   const popUpActive = useSelector(state => state.popUp.active);
 
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/team">
-          <Team />
-        </Route>
-        <Route path="/master">
-          <QM />
-        </Route>
-        <Route path="/scoreboard">
-          <Scoreboard />
-        </Route>
-      </Switch>
-      {crashed && <RecoverButton />}
-      {popUpActive && <PopUp />}
-    </Router>
+    <div className="bg-qdark text-qlight antialiased pt-4 px-8 min-h-screen">
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/team">
+            <Team />
+          </Route>
+          <Route path="/master">
+            <QM />
+          </Route>
+          <Route path="/scoreboard">
+            <Scoreboard />
+          </Route>
+        </Switch>
+        {crashed && <RecoverButton />}
+        {popUpActive && <PopUp />}
+      </Router>
+    </div>
   );
 };
 
