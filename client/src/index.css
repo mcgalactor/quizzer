@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'BadaBoom BB';
+  src: url(./style/fonts/BadaBoomBB.woff2);
+  font-display: swap;
+}

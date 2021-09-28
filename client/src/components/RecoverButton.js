@@ -9,7 +9,7 @@ const RecoverButton = () => {
   const dispatch = useDispatch();
 
   return (
-    <Button type="secondary recover" onClick={() => dispatch(wsConnect())} disabled={connecting}>
+    <Button type="recover" onClick={() => dispatch(wsConnect())} disabled={connecting}>
       {connecting ? (
         <svg
           class="lds-gears"

@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@craco/craco': ^6.3.0
   autoprefixer: ^9
+  clsx: ^1.1.1
   immer: ^8.0.1
   node-sass: ^4.12.0
   postcss: ^7
@@ -20,6 +21,7 @@ specifiers:
 dependencies:
   '@craco/craco': 6.3.0_react-scripts@4.0.3
   autoprefixer: 9.8.6
+  clsx: 1.1.1
   immer: 8.0.4
   node-sass: 4.14.1
   postcss: 7.0.36
@@ -2067,7 +2069,7 @@ packages:
     hasBin: true
     dependencies:
       arg: 5.0.1
-      autoprefixer: 9.8.6
+      autoprefixer: 9.8.7
       bytes: 3.1.0
       chalk: 4.1.2
       chokidar: 3.5.2
@@ -2088,7 +2090,7 @@ packages:
       node-emoji: 1.11.0
       normalize-path: 3.0.0
       object-hash: 2.2.0
-      postcss: 7.0.36
+      postcss: 7.0.38
       postcss-functions: 3.0.0
       postcss-js: 2.0.3
       postcss-load-config: 3.1.0
@@ -3830,6 +3832,11 @@ packages:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 6.2.0
+    dev: false
+
+  /clsx/1.1.1:
+    resolution: {integrity: sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==}
+    engines: {node: '>=6'}
     dev: false
 
   /co/4.6.0:
