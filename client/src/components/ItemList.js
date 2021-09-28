@@ -1,21 +1,34 @@
 import React from 'react';
+import clsx from 'clsx';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { handleItemListChange } from '../reducers/item-list';
 
-export const StaticItemList = ({ items, show }) => {
-  return (
-    <div className="item-list">
-      <div className="content">
-        <ul>
-          {items.map(item => (
-            <li key={item.id}>{item[show]}</li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-};
+const ItemListWrapper = ({ children }) => (
+  <div className="h-full border-qlight border-2 bg-qgrey">
+    <ul>{children}</ul>
+  </div>
+);
+
+const Item = ({ children, ...props }) => (
+  <li
+    {...props}
+    className={clsx('p-4 cursor-pointer select-none', {
+      'bg-qorange hover:bg-yellow-600': props.selected,
+      'hover:bg-gray-600': !props.selected,
+    })}
+  >
+    {children}
+  </li>
+);
+
+export const StaticItemList = ({ items, show }) => (
+  <ItemListWrapper>
+    {items.map(item => (
+      <Item key={item.id}>{item[show]}</Item>
+    ))}
+  </ItemListWrapper>
+);
 
 const ItemList = ({ items, show, selectable, reducer, dispatchAs }) => {
   const dispatch = useDispatch();
@@ -33,21 +46,17 @@ const ItemList = ({ items, show, selectable, reducer, dispatchAs }) => {
   };
 
   return (
-    <div className="item-list">
-      <div className="content">
-        <ul>
-          {items.map(item => (
-            <li
-              className={(selected || {}).id === item.id ? 'selected' : null}
-              onClick={() => onItemClick(item)}
-              key={item.id}
-            >
-              {item[show]}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    <ItemListWrapper>
+      {items.map(item => (
+        <Item
+          selected={(selected || {}).id === item.id ? 'selected' : null}
+          onClick={() => onItemClick(item)}
+          key={item.id}
+        >
+          {item[show]}
+        </Item>
+      ))}
+    </ItemListWrapper>
   );
 };
 
