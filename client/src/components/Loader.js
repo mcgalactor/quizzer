@@ -18,9 +18,10 @@ const Loader = ({ color = '#eee', size = 75 }) => {
   const text = useSelector(state => state.loader.text);
 
   return (
-    <div className="loader">
+    <div className="text-2xl font-semibold space-y-6">
       <span>{text}</span>
       <svg
+        className="text-center w-full"
         xmlns="http://www.w3.org/2000/svg"
         width={size}
         height={size}
