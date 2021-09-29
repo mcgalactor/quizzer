@@ -21,26 +21,16 @@ const QMHome = () => {
     return <CenterLoader />;
   }
   return (
-    <Container className="full-screen center">
-      <Row className="focus-center">
-        <Col>
-          <Logo />
-          <h2>Host a game</h2>
-          <Button
-            onClick={() => handleClick('en')}
-            style={{ display: 'inline-block', width: 'calc(50% - 8px)', marginRight: '16px' }}
-          >
-            English
-          </Button>
-          <Button
-            onClick={() => handleClick('nl')}
-            style={{ display: 'inline-block', width: 'calc(50% - 8px)' }}
-          >
-            Dutch
-          </Button>
-        </Col>
-      </Row>
-    </Container>
+    <div className="container space-y-4 mx-auto flex flex-col m-auto pb-16">
+      <div className="justify-center items-center gap-4 grid">
+        <Logo />
+        <h2 className="text-2xl font-bold text-center">Host a game</h2>
+        <div className="flex gap-4">
+          <Button onClick={() => handleClick('en')}>English</Button>
+          <Button onClick={() => handleClick('nl')}>Dutch</Button>
+        </div>
+      </div>
+    </div>
   );
 };
 

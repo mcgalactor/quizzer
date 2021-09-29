@@ -13,7 +13,7 @@ const App = () => {
   const popUpActive = useSelector(state => state.popUp.active);
 
   return (
-    <div className="bg-qdark text-qlight antialiased pt-4 px-8 min-h-screen">
+    <div className="bg-qdark text-qlight antialiased pt-4 px-8 min-h-screen flex flex-col min-w-min">
       <Router>
         <Switch>
           <Route exact path="/">
