@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './style/index.css';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
@@ -9,7 +9,6 @@ import socketMiddleware from './middleware/socketMiddleware';
 import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers';
 import App from './components/App';
-import './style/index.scss';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
