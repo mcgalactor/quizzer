@@ -2,11 +2,10 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { loginAsScoreboardViewer } from '../reducers/scoreboard';
-import { Container, Row, Col } from 'react-grid-system';
-import Logo from './Logo';
 import { CenterLoader } from './Loader';
 import Input from './Input';
 import Button from './Button';
+import Logo from './Logo';
 
 const ScoreboardLogin = () => {
   const connected = useSelector(state => state.websocket.connected);
@@ -26,25 +25,29 @@ const ScoreboardLogin = () => {
   }
 
   return (
-    <Container fluid className="full-screen center">
-      <Row className="focus-center">
-        <Col>
-          <Logo center />
-          <Input
-            reducer="teamApp"
-            item="roomCode"
-            labelText="Room code"
-            placeholder="Enter 4-letter code"
-            uppercase
-            minLength="4"
-            maxLength="4"
-          />
-          <Button onClick={handleClick} disabled={!roomCodeValid}>
-            Join
-          </Button>
-        </Col>
-      </Row>
-    </Container>
+    <div fluid className="container mx-auto flex flex-col m-auto items-center">
+      <div className="grid auto-cols-min">
+        <div>
+          <div className="flex flex-col gap-4">
+            <Logo center />
+            <div>
+              <Input
+                reducer="teamApp"
+                item="roomCode"
+                labelText="Room code"
+                placeholder="Enter 4-letter code"
+                uppercase
+                minLength="4"
+                maxLength="4"
+              />
+            </div>
+            <Button onClick={handleClick} disabled={!roomCodeValid}>
+              Join
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

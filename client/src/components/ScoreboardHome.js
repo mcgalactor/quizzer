@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Container, Row, Col } from 'react-grid-system';
 import { Redirect } from 'react-router-dom';
 
 import { loginAsScoreboardViewer, fetchGameState } from '../reducers/scoreboard';
@@ -20,37 +19,19 @@ const Header = () => {
   return ended ? (
     <>
       <Logo center />
-      <Row>
-        <Col>
-          <h1 style={{ textAlign: 'center', fontSize: '3rem', marginTop: '0' }}>Quizz Ended</h1>
-        </Col>
-      </Row>
+      <h1 className="text-5xl text-center">Quizz Ended</h1>
     </>
   ) : (
     <>
-      <Row>
-        <Col>
-          <h1 style={{ float: 'left' }}>Round {round}</h1>
-        </Col>
-        <Col>
-          <h1 style={{ textAlign: 'center' }}>{category}</h1>
-        </Col>
-        <Col>
-          <h1 style={{ float: 'right' }}>Question {questionNo}</h1>
-        </Col>
-      </Row>
+      <div className="flex justify-between text-3xl">
+        <h1>Round {round}</h1>
+        <h1>{category}</h1>
+        <h1>Question {questionNo}</h1>
+      </div>
       {!questionCompleted ? (
-        <Row>
-          <Col>
-            <h1 style={{ textAlign: 'center', fontSize: '3rem' }}>Q: {question}</h1>
-          </Col>
-        </Row>
+        <h1 className="text-5xl text-center">Q: {question}</h1>
       ) : (
-        <Col>
-          <Col>
-            <h1 style={{ textAlign: 'center', fontSize: '3rem' }}>A: {answer}</h1>
-          </Col>
-        </Col>
+        <h1 className="text-5xl text-center">A: {answer}</h1>
       )}
     </>
   );
@@ -61,53 +42,56 @@ const TeamStatus = ({ team, pos }) => {
   const questionCompleted = useSelector(state => state.scoreboard.questionCompleted);
   const ended = useSelector(state => state.scoreboard.ended);
 
-  const styleLeft = { paddingLeft: '75px', paddingRight: '50px' };
-  const styleRight = { paddingLeft: '50px', paddingRight: '75px' };
-
   if (!team) {
-    return <Col style={pos % 2 ? styleLeft : styleRight} />;
+    return <></>;
   }
 
   return (
-    <Col style={pos % 2 ? styleLeft : styleRight}>
-      <div className="team-status">
-        <div className="info">
-          <span className="pos">{pos}</span>
-          {ended || <span className="round-score">{team.roundScore}</span>}
-          <span className="round-points">{team.roundPoints}</span>
-        </div>
-        <div className="team">
-          <span className="name">{team.name}</span>
-          {questionCompleted && !ended && (
-            <>
-              {team.guessCorrect ? (
-                <span className="status" role="img" aria-label="Correct guess">
-                  ✔️
-                </span>
-              ) : (
-                <span className="status" role="img" aria-label="Incorrect guess">
-                  ❌
-                </span>
-              )}
-            </>
-          )}
-          {questionClosed || ended || (
-            <>
-              {!team.guess && (
-                <span className="status" role="img" aria-label="The team is thinking of a guess">
-                  💭
-                </span>
-              )}
-            </>
-          )}
-        </div>
-        {questionCompleted && !ended && (
-          <div className="guess">
-            <span className="guess">{team.guess || '-'}</span>
+    <div className="bg-qgrey p-3 border-qlight border-2">
+      <div className="flex justify-between text-5xl font-normal">
+        <span className="font-semibold">{pos}</span>
+        {ended || (
+          <div>
+            <span>{team.roundScore}</span>
+            <span className="text-2xl">✔/round</span>
           </div>
         )}
+        <div>
+          <span>{team.roundPoints}</span>
+          <span className="text-2xl">RP</span>
+        </div>
       </div>
-    </Col>
+      <div className="flex items-center justify-between">
+        <span className="text-6xl">{team.name}</span>
+        {questionCompleted && !ended && (
+          <>
+            {team.guessCorrect ? (
+              <span className="text-4xl" role="img" aria-label="Correct guess">
+                ✔️
+              </span>
+            ) : (
+              <span className="text-4xl" role="img" aria-label="Incorrect guess">
+                ❌
+              </span>
+            )}
+          </>
+        )}
+        {questionClosed || ended || (
+          <>
+            {!team.guess && (
+              <span className="text-4xl" role="img" aria-label="The team is thinking of a guess">
+                💭
+              </span>
+            )}
+          </>
+        )}
+      </div>
+      {questionCompleted && !ended && (
+        <div>
+          <span className="text-2xl">{team.guess || '-'}</span>
+        </div>
+      )}
+    </div>
   );
 };
 
@@ -123,20 +107,20 @@ const TeamStatuses = () => {
     .sort((a, b) => b.roundPoints - a.roundPoints || b.roundScore - a.roundScore);
 
   return (
-    <>
-      <Row className="big top-anxiety">
+    <div className="grid grid-rows-3 gap-4">
+      <div className="grid grid-cols-2 gap-4">
         <TeamStatus pos={1} team={teams[0]} />
         <TeamStatus pos={2} team={teams[1]} />
-      </Row>
-      <Row className="big top-anxiety">
+      </div>
+      <div className="grid grid-cols-2 gap-4">
         <TeamStatus pos={3} team={teams[2]} />
         <TeamStatus pos={4} team={teams[3]} />
-      </Row>
-      <Row className="big top-anxiety">
+      </div>
+      <div className="grid grid-cols-2 gap-4">
         <TeamStatus pos={5} team={teams[4]} />
         <TeamStatus pos={6} team={teams[5]} />
-      </Row>
-    </>
+      </div>
+    </div>
   );
 };
 
@@ -149,10 +133,10 @@ const ScoreBoard = () => {
   }, [dispatch, roomCode]);
 
   return (
-    <Container fluid className="top-anxiety">
+    <div fluid className="container mx-auto pt-4 flex flex-col gap-8">
       <Header />
       <TeamStatuses />
-    </Container>
+    </div>
   );
 };
 
