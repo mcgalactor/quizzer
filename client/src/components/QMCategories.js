@@ -45,7 +45,7 @@ const QMCategories = () => {
       <Logo center />
       <div>
         <div className="grid grid-cols-qm-selection gap-8">
-          <div className="grid grid-cols-qm-selection gap-8">
+          <div>
             <ItemListHeader>Categories</ItemListHeader>
           </div>
           <div className="text-center">
