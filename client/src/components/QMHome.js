@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { Container, Row, Col } from 'react-grid-system';
 import { createRoom } from '../reducers/qm/room';
 import Logo from './Logo';
 import Button from './Button';

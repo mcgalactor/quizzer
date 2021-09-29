@@ -1,16 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Container, Row, Col } from 'react-grid-system';
 
 export const CenterLoader = (...props) => {
   return (
-    <Container fluid className="full-screen center">
-      <Row className="focus-center">
-        <Col>
-          <Loader {...props} />
-        </Col>
-      </Row>
-    </Container>
+    <div fluid className="container mx-auto flex flex-col m-auto items-center">
+      <div className="grid max-w-prose">
+        <Loader {...props} />
+      </div>
+    </div>
   );
 };
 

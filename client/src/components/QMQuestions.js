@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Container, Row, Col } from 'react-grid-system';
 import { Redirect } from 'react-router-dom';
 
 import { fetchQuestions, confirmQuestionAndContinue } from '../reducers/qm/question';

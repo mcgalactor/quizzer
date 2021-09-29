@@ -5,8 +5,6 @@ import TeamHome from './TeamHome';
 import TeamRoom from './TeamRoom';
 import Logo from './Logo';
 
-import { Container, Row, Col } from 'react-grid-system';
-
 const Team = ({ location: { pathname } }) => {
   const connected = useSelector(state => state.websocket.connected);
 

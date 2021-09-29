@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Container, Row, Col } from 'react-grid-system';
 import { Redirect } from 'react-router-dom';
 
 import Button from './Button';
@@ -31,8 +30,6 @@ const QMCategories = () => {
       dispatch(fetchCategories());
     }
   }, [categories, dispatch]);
-
-  const middleWidth = 3;
 
   if (roundStarted) {
     return <Redirect to="/master/questions" />;
