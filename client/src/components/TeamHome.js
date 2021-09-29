@@ -26,28 +26,33 @@ const TeamHome = () => {
   return isLoading ? (
     <Loader />
   ) : (
-    <>
-      <Input
-        reducer="teamApp"
-        item="roomCode"
-        labelText="Room code"
-        placeholder="Enter 4-letter code"
-        uppercase
-        minLength="4"
-        maxLength="4"
-      />
-      <Input
-        reducer="teamApp"
-        item="team"
-        labelText="Team name"
-        placeholder="Enter your team name"
-        maxLength="12"
-        showCounter
-      />
+    <div className="grid gap-4">
+      <div>
+        <Input
+          reducer="teamApp"
+          item="roomCode"
+          labelText="Room code"
+          placeholder="Enter 4-letter code"
+          uppercase
+          minLength="4"
+          maxLength="4"
+        />
+      </div>
+      <div>
+        <Input
+          reducer="teamApp"
+          item="team"
+          labelText="Team name"
+          placeholder="Enter your team name"
+          maxLength="12"
+          showCounter
+        />
+      </div>
+
       <Button onClick={handleClick} disabled={!roomCodeValid || !teamValid}>
         Play!
       </Button>
-    </>
+    </div>
   );
 };
 

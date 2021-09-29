@@ -15,10 +15,10 @@ const Team = ({ location: { pathname } }) => {
   }
 
   return (
-    <Container fluid className="full-screen center">
-      <Row className="focus-center">
-        <Col>
-          <Logo center />
+    <div fluid className="container mx-auto flex flex-col m-auto items-center">
+      <div className="grid auto-cols-min">
+        <div>
+          <Logo />
           <Switch>
             <Route exact path="/team/room">
               <TeamRoom />
@@ -27,9 +27,9 @@ const Team = ({ location: { pathname } }) => {
               <TeamHome />
             </Route>
           </Switch>
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </div>
+    </div>
   );
 };
 

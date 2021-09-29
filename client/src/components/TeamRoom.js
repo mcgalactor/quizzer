@@ -28,18 +28,33 @@ const TeamRoom = () => {
   };
 
   return isLoading || !open ? (
-    <>
-      <Loader /> {open && <Button onClick={handleChangeAnswer}>Change answer</Button>}
-    </>
+    <div className="flex flex-col gap-2 text-center">
+      <Loader />
+      {open && <Button onClick={handleChangeAnswer}>Change answer</Button>}
+    </div>
   ) : (
-    <>
-      <span className="round-number">{`Round ${roundNo}`}</span>
-      <span className="question-number">{`Question ${questionNo}`}</span>
-      <span className="category">{category}</span>
-      <span className="question">{question}</span>
-      <Input reducer="teamApp" item="guess" placeholder="Your answer" labelText="Answer" maxLength="50" showCounter />
+    <div className="flex flex-col gap-4">
+      <div className="flex flex-col items-center">
+        <span className="font-semibold">Round {roundNo}</span>
+        <span className="font-semibold text-4xl">Question {questionNo}</span>
+        <span className="font-semibold">{category}</span>
+      </div>
+
+      <span className="font-semibold text-2xl text-center">{question}</span>
+
+      <div>
+        <Input
+          reducer="teamApp"
+          item="guess"
+          placeholder="Your answer"
+          labelText="Answer"
+          maxLength="50"
+          showCounter
+        />
+      </div>
+
       <Button onClick={handleSubmit}>Submit!</Button>
-    </>
+    </div>
   );
 };
 
