@@ -1,5 +1,4 @@
 import React, { useEffect, useCallback } from 'react';
-import { Container, Row, Col } from 'react-grid-system';
 import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
@@ -13,15 +12,15 @@ const Header = () => {
   const { question, answer } = useSelector(state => state.quizzMasterApp.currentQuestion);
 
   return (
-    <Row>
-      <Col xs={8} push={{ xs: 2 }} style={{ textAlign: 'center' }}>
-        <h1>
-          Round {round} Question {questionNo}
+    <div>
+      <div className="flex flex-col gap-2 justify-center items-center">
+        <h1 className="text-3xl font-bold">
+          Round {round} - Question {questionNo}
         </h1>
         <h2>Q: {question}</h2>
-        <h2>A: {answer}</h2>
-      </Col>
-    </Row>
+        <h2 className="font-semibold">A: {answer}</h2>
+      </div>
+    </div>
   );
 };
 
@@ -37,11 +36,11 @@ const TeamGuess = ({ team: teamNo }) => {
   }, [roomCode, team, dispatch]);
 
   if (!team) {
-    return <Col />;
+    return <div />;
   }
   return (
-    <Col>
-      <div className="team-guess">
+    <div>
+      <div className="bg-qgrey p-5 text-center flex flex-col items-center gap-4">
         <h3>{team.name}</h3>
         <h3>{team.guess || '-'}</h3>
 
@@ -59,23 +58,23 @@ const TeamGuess = ({ team: teamNo }) => {
           </Button>
         )}
       </div>
-    </Col>
+    </div>
   );
 };
 
 const Guesses = () => {
   return (
     <>
-      <Row className="top-anxiety">
+      <div className="grid grid-cols-3 gap-8">
         <TeamGuess team={0} />
         <TeamGuess team={1} />
         <TeamGuess team={2} />
-      </Row>
-      <Row className="top-anxiety">
+      </div>
+      <div className="grid grid-cols-3 gap-8">
         <TeamGuess team={3} />
         <TeamGuess team={4} />
         <TeamGuess team={5} />
-      </Row>
+      </div>
     </>
   );
 };
@@ -86,8 +85,8 @@ const NextButton = () => {
   const roomCode = useSelector(state => state.quizzMasterApp.roomCode);
 
   return (
-    <Row className="top-anxiety">
-      <Col xs={4} push={{ xs: 4 }}>
+    <div className="grid grid-cols-3 gap-8">
+      <div className="grid-cols-1 col-start-2">
         {questionClosed ? (
           <Button
             onClick={() => {
@@ -105,8 +104,8 @@ const NextButton = () => {
             Close Question
           </Button>
         )}
-      </Col>
-    </Row>
+      </div>
+    </div>
   );
 };
 
@@ -124,11 +123,11 @@ const QMGuesses = () => {
   }
 
   return (
-    <Container className="top-anxiety">
+    <div className="container pt-4 space-y-4 mx-auto">
       <Header />
       <Guesses />
       <NextButton />
-    </Container>
+    </div>
   );
 };
 
