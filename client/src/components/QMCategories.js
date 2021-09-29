@@ -41,76 +41,74 @@ const QMCategories = () => {
   }
 
   return (
-    <Container className="top-anxiety">
+    <div className="container space-y-4 mx-auto">
       <Logo center />
-      <Row>
-        <Col>
-          <ItemListHeader>Categories</ItemListHeader>
-        </Col>
-        <Col xs={middleWidth}>
-          <ItemListHeader style={{ textAlign: 'center' }}>Round {roundNo + 1}</ItemListHeader>
-        </Col>
-        <Col>
-          <ItemListHeader>Selected Categories</ItemListHeader>
-        </Col>
-      </Row>
-      <Row style={{ minHeight: '230px' }}>
-        <Col>
-          <ItemList
-            items={categories}
-            show="category"
-            selectable
-            reducer={['quizzMasterApp', 'selectedCategory']}
-            dispatchAs="CATEGORIES"
-          />
-        </Col>
-        <Col xs={middleWidth} className="button-stack">
-          <Button
-            disabled={
-              selectedCategories.length >= 3 ||
-              !selectedCategory ||
-              !categories.includes(selectedCategory)
-            }
-            onClick={() => dispatch(selectCategory())}
-          >
-            Select category
-          </Button>
-          <Button
-            disabled={!selectedCategory || !selectedCategories.includes(selectedCategory)}
-            onClick={() => dispatch(deselectCategory())}
-          >
-            Deselect category
-          </Button>
-          <Button
-            disabled={selectedCategories.length < 3}
-            onClick={() => dispatch(confirmCategoriesAndContinue(code, selectedCategories))}
-            className="center-stick-bottom start-round"
-          >
-            Start round
-          </Button>
-        </Col>
-        <Col>
-          <ItemList
-            items={selectedCategories}
-            show="category"
-            selectable
-            reducer={['quizzMasterApp', 'selectedCategory']}
-            dispatchAs="CATEGORIES"
-          />
-        </Col>
-      </Row>
-      <Row>
-        <Col />
-        <Col xs={middleWidth} className="top-anxiety">
-          {roundNo >= 1 ? (
-            <Button className="secondary" onClick={() => dispatch(endQuizz(code))}>
-              End Quizz
+      <div>
+        <div className="grid grid-cols-qm-selection gap-8">
+          <div className="grid grid-cols-qm-selection gap-8">
+            <ItemListHeader>Categories</ItemListHeader>
+          </div>
+          <div className="text-center">
+            <h2 className="pt-6 text-xl">
+              <span className="font-extralight">Round: </span>
+              <span className="font-normal">{roundNo + 1}</span>
+            </h2>
+          </div>
+          <div>
+            <ItemListHeader>Selected Categories</ItemListHeader>
+          </div>
+        </div>
+        <div className="grid grid-cols-qm-selection gap-8">
+          <div>
+            <ItemList
+              items={categories}
+              show="category"
+              selectable
+              reducer={['quizzMasterApp', 'selectedCategory']}
+              dispatchAs="CATEGORIES"
+            />
+          </div>
+          <div className="flex flex-col space-y-4">
+            <Button
+              disabled={
+                selectedCategories.length >= 3 ||
+                !selectedCategory ||
+                !categories.includes(selectedCategory)
+              }
+              onClick={() => dispatch(selectCategory())}
+            >
+              Select category
             </Button>
-          ) : null}
-        </Col>
-        <Col />
-      </Row>
-    </Container>
+            <Button
+              disabled={!selectedCategory || !selectedCategories.includes(selectedCategory)}
+              onClick={() => dispatch(deselectCategory())}
+            >
+              Deselect category
+            </Button>
+            <Button
+              disabled={selectedCategories.length < 3}
+              onClick={() => dispatch(confirmCategoriesAndContinue(code, selectedCategories))}
+            >
+              Start round
+            </Button>
+            {roundNo >= 1 && (
+              <Button type="secondary" onClick={() => dispatch(endQuizz(code))}>
+                End Quizz
+              </Button>
+            )}
+          </div>
+          <div>
+            <ItemList
+              items={selectedCategories}
+              show="category"
+              selectable
+              reducer={['quizzMasterApp', 'selectedCategory']}
+              dispatchAs="CATEGORIES"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
