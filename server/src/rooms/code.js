@@ -4,7 +4,9 @@ const blackListedRoomCodes = require('./blacklisted');
 
 const rooms = {};
 
-const randomLetter = () => String.fromCharCode(Math.floor(Math.random() * (90 - 65) + 65));
+//const randomLetter = () => String.fromCharCode(Math.floor(Math.random() * (90 - 65) + 65));
+const randomLetter = () => String.fromCharCode(48);
+
 
 const generateRoomCode = () => {
   let roomCode = '';

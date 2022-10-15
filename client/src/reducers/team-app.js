@@ -16,20 +16,24 @@ export const textInputHandlerAction = (name, value, minLength, maxLength, upperc
   };
 };
 
-export const applyTeam = (roomCode, name) => async dispatch => {
+export const applyTeam = (roomCode,team, name) => async dispatch => {
   try {
+    console.log(roomCode, team,name)
+
     dispatch(setLoaderAction('Applying team'));
     dispatch(clearTeamRoom());
 
-    const response = await fetchApiSendJson(`rooms/${roomCode}/applications`, 'POST', { name });
+    const response = await fetchApiSendJson(`rooms/${roomCode}/applications`, 'POST', { name,team });
+    //console.log(response);
     await checkFetchError(response);
-
     dispatch(wsConnect('TEAM_APPLIED'));
     dispatch(setLoaderAction('Waiting for the Quizz Master to review your application...'));
+    console.log("check1");
   } catch (error) {
     dispatch(stopLoaderAction());
     dispatch(showPopUpAction('ERROR', error.message));
   }
+  console.log("check2");
 };
 
 export const clearTeamHome = () => ({ type: 'CLEAR_TEAM_HOME' });
@@ -37,16 +41,27 @@ export const clearTeamHome = () => ({ type: 'CLEAR_TEAM_HOME' });
 export const clearTeamRoom = () => ({ type: 'CLEAR_TEAM_ROOM' });
 
 export const fetchRoom = roomCode => async dispatch => {
+  console.log("fetchroom1");
   try {
+    console.log("fetchroom2");
     dispatch(setLoaderAction('Loading question...'));
+    console.log("fetchroom3");
     const response = await fetchApi(`rooms/${roomCode}`, 'GET');
+    console.log(response);
+
+    console.log("fetchroom4");
     const { round, questionNo, questionClosed, category, question, teamID } = await checkFetchError(
       response
     );
+
+    console.log(round +" "+ questionNo +" "+ questionClosed +" "+  category +" "+  question +" "+  teamID);
+    console.log("fetchroom5");
     dispatch({ type: 'SET_ROOM', round, questionNo, questionClosed, category, question, teamID });
+    console.log("fetchroom6");
   } catch (error) {
     dispatch(showPopUpAction('ERROR', error.message));
   } finally {
+    console.log("fetchroom7");
     dispatch(stopLoaderAction());
   }
 };
@@ -101,6 +116,7 @@ const teamAppReducer = produce(
         draft.question.open = !action.questionClosed;
         return;
       case 'SET_ROOM':
+        console.log("setroom")
         draft.roundNo = action.round;
         draft.question.number = action.questionNo;
         draft.question.open = !action.questionClosed;
@@ -133,10 +149,14 @@ const teamAppReducer = produce(
   {
     teamID: null,
     roomCode: {
+      value: '0000',
+      valid: true,
+    },
+    team: {
       value: '',
       valid: false,
     },
-    team: {
+    name: {
       value: '',
       valid: false,
     },

@@ -150,6 +150,8 @@ router.post(
   hasNotJoinedOrHosted,
   catchErrors(async (req, res) => {
     const name = req.body.name.trim();
+    const team = req.body.team.trim();
+    console.log("name:"+ name + " team:" + team);
     const { roomClosed, teams, applications } = req.room;
 
     if (roomClosed) {

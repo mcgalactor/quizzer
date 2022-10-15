@@ -35,6 +35,7 @@ const Input = ({
         onChange={handleChange()}
         minLength={minLength}
         maxLength={maxLength}
+        
       />
     </>
   );

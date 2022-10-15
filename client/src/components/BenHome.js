@@ -13,19 +13,19 @@ const TeamHome = () => {
   //const roomCodeValue = useSelector(state => state.teamApp.roomCode.value);
   //const teamValid = useSelector(state => state.teamApp.team.valid);
   //const teamValue = useSelector(state => state.teamApp.team.value);
-  const nameValid = useSelector(state => state.teamApp.name.valid);
-  const nameValue = useSelector(state => state.teamApp.name.value);
   const dispatch = useDispatch();
   const roomCodeValue="0000";
-  const teamValue="world";
-  
-  
+  const teamValue="ben";
+  const nameValue="Benoit";
+
   const handleClick = () => {
-    console.log(roomCodeValue + " " +  teamValue + " " + nameValue);
-    dispatch(applyTeam(roomCodeValue, teamValue,nameValue));
+    console.log(roomCodeValue);
+    dispatch(applyTeam(roomCodeValue, teamValue));
   };
 
   if (connected) {
+    console.log(connected);
+
     return <Redirect to="/team/room" />;
   }
 
@@ -45,20 +45,19 @@ const TeamHome = () => {
         maxLength="5"
         
       /> */}
+      {/*
       <Input
         reducer="teamApp"
-        item="name"
+        item="team"
         labelText="Name"
-        placeholder="Enter your name"
+        placeholder="Hello Ben"
         maxLength="12"
-        minLength="2"
-        
         showCounter
-      />
+    />*/}
       
       {/*<Button onClick={handleClick} disabled={!roomCodeValid || !teamValid}>*/}
-      <Button onClick={handleClick} disabled={!nameValid}>
-        Join Team World!
+      <Button onClick={handleClick} disabled={false}>
+        Join Quiz!
       </Button>
     </>
   );

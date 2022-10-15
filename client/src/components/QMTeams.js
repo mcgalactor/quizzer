@@ -84,6 +84,7 @@ const QMTeams = () => {
           >
             Reject team
           </Button>
+          
           <Button
             disabled={
               approvedTeamApplications.length < 2 ||
@@ -99,6 +100,10 @@ const QMTeams = () => {
         <Col>
           <StaticItemList items={approvedTeamApplications} show="name" />
         </Col>
+        <Col>
+          <StaticItemList items={approvedTeamApplications} show="name" />
+        </Col>
+
       </Row>
     </Container>
   );

@@ -7,10 +7,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - '3000:3000'
+    network_mode: "host"
     volumes:
       - ./client:/usr/src/app
       - /usr/src/app/node_modules
-
+  
   backend:
     restart: always
     depends_on:
@@ -20,6 +21,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - '4000:4000'
+    network_mode: "host"
     volumes:
       - ./server:/usr/src/app
       - /usr/src/app/node_modules
@@ -27,10 +29,11 @@ services:
     environment:
       EXPRESS_PORT: 4000
       DB_NAME: quizzer
-      MONGODB_HOST: database
+      #MONGODB_HOST: database
+      MONGODB_HOST: localhost
       MONGODB_PORT: 27017
-      WAIT_HOSTS: database:27017
-
+      #WAIT_HOSTS: database:27017
+      WAIT_HOSTS: 192.168.1.181:27017
   database:
     image: mongo:4
     environment:
@@ -39,3 +42,4 @@ services:
       - ./server/mongo/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     ports:
       - '27017:27017'
+    network_mode: "host"

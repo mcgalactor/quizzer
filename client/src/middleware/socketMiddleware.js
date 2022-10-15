@@ -26,9 +26,12 @@ const socketMiddleware = () => {
 
   const onMessage = store => ({ data }) => {
     const state = store.getState();
+    console.log("message:"+ data);
+    console.log("state:"+ state.teamApp.roomCode);
     switch (data) {
       case 'TEAM_APPLIED':
         store.dispatch(fetchTeamApplications(state.quizzMasterApp.roomCode));
+        console.log("test");
         break;
       case 'APPLICATION_ACCEPTED':
         store.dispatch(
@@ -36,6 +39,7 @@ const socketMiddleware = () => {
             'Your team has been approved. Waiting for the Quizz Master to start the round...'
           )
         );
+        console.log("Test2");
         break;
       case 'APPLICATION_REJECTED':
         store.dispatch(stopLoaderAction());
@@ -48,7 +52,11 @@ const socketMiddleware = () => {
         );
         break;
       case 'QUESTION_SELECTED':
+        console.log(state.teamApp.roomCode.value);
+        //store.dispatch(fetchRoom("0000"));
+        console.log("fetchroom middleware1");
         store.dispatch(fetchRoom(state.teamApp.roomCode.value));
+        console.log("fetchroom middleware2");
         break;
       case 'GUESS_SUBMITTED':
         store.dispatch(fetchRoomState(state.quizzMasterApp.roomCode));
@@ -77,6 +85,7 @@ const socketMiddleware = () => {
 
   // the middleware part of this function
   return store => next => action => {
+    console.log("action"+ action.type);
     switch (action.type) {
       case 'WS_CONNECT':
         store.dispatch(wsConnecting());
