@@ -10,7 +10,7 @@ import QMGuesses from './QMGuesses';
 
 const QM = ({ location: { pathname } }) => {
   const connected = useSelector(state => state.websocket.connected);
-
+  console.log("Test World");
   if (pathname !== '/master' && !connected) {
     return <Redirect to="/master" />;
   }

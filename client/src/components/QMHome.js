@@ -12,6 +12,7 @@ const QMHome = () => {
   const websocketConnected = useSelector(state => state.websocket.connected);
   const dispatch = useDispatch();
   const handleClick = language => {
+    console.log("CreateRoom");
     dispatch(createRoom(language));
   };
 

@@ -16,21 +16,27 @@ export const textInputHandlerAction = (name, value, minLength, maxLength, upperc
   };
 };
 
-export const applyTeam = (roomCode,team, name) => async dispatch => {
+export const applyTeam = (roomCode, name) => async dispatch => {
+  console.log("applying team Test");
   try {
-    console.log(roomCode, team,name)
-
+    console.log("applying team Test");
+    
+    //console.log(roomCode, team,name);
+    console.log("applying team");
     dispatch(setLoaderAction('Applying team'));
     dispatch(clearTeamRoom());
 
-    const response = await fetchApiSendJson(`rooms/${roomCode}/applications`, 'POST', { name,team });
+    const response = await fetchApiSendJson(`rooms/${roomCode}/applications`, 'POST', { name });
     //console.log(response);
     await checkFetchError(response);
     dispatch(wsConnect('TEAM_APPLIED'));
-    dispatch(setLoaderAction('Waiting for the Quizz Master to review your application...'));
     console.log("check1");
+    dispatch(setLoaderAction('Waiting for the Quizz Master to review your application...'));
+    console.log("check2");
   } catch (error) {
+    console.log("check error");
     dispatch(stopLoaderAction());
+    
     dispatch(showPopUpAction('ERROR', error.message));
   }
   console.log("check2");

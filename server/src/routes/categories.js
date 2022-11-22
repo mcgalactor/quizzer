@@ -16,7 +16,7 @@ router.get(
       .distinct('category')
       .exec();
     res.json(categories);
-  })
+      })
 );
 
 router.get(

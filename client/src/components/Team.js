@@ -10,8 +10,9 @@ import { Container, Row, Col } from 'react-grid-system';
 
 const Team = ({ location: { pathname } }) => {
   const connected = useSelector(state => state.websocket.connected);
-
-  if (pathname !== '/team' && pathname !== '/team/ben' && !connected) {
+  console.log("test team.js");
+  if (pathname !== '/team/room' && pathname !== '/team' && pathname !== '/team/ben' && !connected) {
+    console.log("redirect test");
     return <Redirect to="/team" />;
   }
 
@@ -24,9 +25,14 @@ const Team = ({ location: { pathname } }) => {
             <Route exact path="/team/ben">
               <BenRoom />
             </Route>
+            <Route exact path="/team/room">
+              <TeamRoom />
+            </Route>            
             <Route>
               <TeamHome />
             </Route>
+
+
           </Switch>
         </Col>
       </Row>

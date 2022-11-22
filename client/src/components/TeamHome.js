@@ -22,7 +22,7 @@ const TeamHome = () => {
   
   const handleClick = () => {
     console.log(roomCodeValue + " " +  teamValue + " " + nameValue);
-    dispatch(applyTeam(roomCodeValue, teamValue,nameValue));
+    dispatch(applyTeam(roomCodeValue,nameValue));
   };
 
   if (connected) {

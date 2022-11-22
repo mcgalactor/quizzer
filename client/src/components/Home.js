@@ -16,6 +16,7 @@ const Card = ({ title, subtitle, link, button }) => (
 );
 
 const Home = () => {
+  
   return (
     <Container className="home-page top-anxiety">
       <Logo center />

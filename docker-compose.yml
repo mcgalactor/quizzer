@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - '3000:3000'
-    network_mode: "host"
+    network_mode: "bridge"
     volumes:
       - ./client:/usr/src/app
       - /usr/src/app/node_modules
@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - '4000:4000'
-    network_mode: "host"
+    network_mode: "bridge"
     volumes:
       - ./server:/usr/src/app
       - /usr/src/app/node_modules
@@ -30,10 +30,11 @@ services:
       EXPRESS_PORT: 4000
       DB_NAME: quizzer
       #MONGODB_HOST: database
-      MONGODB_HOST: localhost
+      #MONGODB_HOST: localhost
+      MONGODB_HOST: 192.168.1.182
       MONGODB_PORT: 27017
       #WAIT_HOSTS: database:27017
-      WAIT_HOSTS: 192.168.1.181:27017
+      WAIT_HOSTS: 192.168.1.182:27017
   database:
     image: mongo:4
     environment:
@@ -42,4 +43,4 @@ services:
       - ./server/mongo/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     ports:
       - '27017:27017'
-    network_mode: "host"
+    network_mode: "bridge"

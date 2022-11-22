@@ -82,7 +82,7 @@ const QMCategories = () => {
             Deselect category
           </Button>
           <Button
-            disabled={selectedCategories.length < 3}
+            disabled={selectedCategories.length < 1 || selectedCategories.length > 1}
             onClick={() => dispatch(confirmCategoriesAndContinue(code, selectedCategories))}
             className="center-stick-bottom start-round"
           >

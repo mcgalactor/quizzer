@@ -8,6 +8,7 @@ export const setLoaderAction = text => {
 };
 
 export const stopLoaderAction = () => {
+  console.log("stoploader");
   return {
     type: 'STOP_LOADER',
   };

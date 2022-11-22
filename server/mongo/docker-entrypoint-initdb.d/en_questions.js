@@ -2,589 +2,589 @@ db.questions.insertMany([
 	{
 		"question": "Who wrote Twilight series of novels?",
 		"answer": "Stephenie Meyer",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who wrote the poem 'The Owl and the Pussycat'?",
 		"answer": "Edward Lear",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In the Adrian Mole Diaries, what is the surname of his girlfriend?",
 		"answer": "Braiwaithe",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who wrote the novel Revolutionary Road, which was made into a successful feature film?",
 		"answer": "Richard Yates",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What word does the bird constantly repeat in Edgar Allan Poe`s classic poem The Raven?",
 		"answer": "Nevermore",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In Gullivers Travels, what is the name of the flying island?",
 		"answer": "Laputa",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who was the author of Whisky Galore?",
 		"answer": "Compton Mackenzie",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "According to Shakespeare, whose horse was called White Surrey?",
 		"answer": "Richard III's",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "How old is Juliet when she dies in Shakespeare's Romeo and Juliett?",
 		"answer": "13 years of age (nearly 14)",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who has written a series of letters entitled `Dear Fatty` in the form of an autobiography?",
 		"answer": "Dawn French",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What is the name of the famous statue by Edvard Eriksen, unveiled on the 23rd August, 1913?",
 		"answer": "The Little Mermaid (in Copenhagen)",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Thomas Hardy`s heart is buried in his native Dorset, but where in London is his body buried?",
 		"answer": "Poet`s Corner",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which author wrote The Bourne Identity?",
 		"answer": "Robert Ludlum",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In the cartoon books, what is the name of the druid that provides potions for Asterix?",
 		"answer": "Getafix",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
-		"question": "In literature, who owns a cat called Crookshanks?",
+		"question": "In Literatur, who owns a cat called Crookshanks?",
 		"answer": "Hermione Granger (from the Harry Potter stories)",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In George Orwell`s Animal Farm, what type of animals were Clover, Mollie and Boxer?",
 		"answer": "Horses",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In Peter Pan, what is the name of Captain Hook`s ship?",
 		"answer": "The Jolly Roger",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who wrote the Waverley novels?",
 		"answer": "Sir Walter Scott",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What famous work of Niccolo Machiavelli redefined the beliefs of cynicism in the Italian Renaissance?",
 		"answer": "The Prince",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "The film Clueless is a modern take on which literary classic by Jane Austin?",
 		"answer": "Emma",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In the Harry Potter novels, who is the author of The Dream Oracle?",
 		"answer": "Inigo Imago",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What did Hugh Heffner originally plan to call his Playboy magazine?",
 		"answer": "Stag Party",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who wrote the book The Hound Of The Baskervilles?",
 		"answer": "Sir Arthur Conan Doyle",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In which book did Sherlock Holmes first appear?",
 		"answer": "Study In Scarlet",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who wrote the children`s book The Gruffalo?",
 		"answer": "Julia Donaldson",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In which art gallery is the Mona Lisa kept?",
 		"answer": "The Louvre",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Written by Alfred, Lord Tennyson, which poem starts with the line `On either side of the river lie`?",
 		"answer": "The Lady of Shalott",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "When viewed at a certain angle, the 1553 painting: `The Ambassadors` reveals which mysterious object?",
 		"answer": "A skull",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Written by Edgar Allen Poe and published in 1845, what poem repeats the famous line `nevermore`?",
 		"answer": "The Raven",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "According to Douglas Adams what number is the meaning of life?",
 		"answer": "42",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who wrote the novel Sex And The City?",
 		"answer": "Candace Bushnell",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who painted the famous painting The Scream?",
 		"answer": "Edward Munch",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What was the name of the first full novel written by Charles Dickens?",
 		"answer": "The Pickwick Papers",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What was Frankenstein`s first name?",
 		"answer": "Viktor",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What is the third book of the Bible?",
 		"answer": "Leviticus",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which playwright wrote Ghosts and A Doll`s House?",
 		"answer": "Henrik Ibsen",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which Arthur Miller play featured the character Willy Loman, and was made into a 1951 film starring Frederick March?",
 		"answer": "Death of a Salesman",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which sci-fi author wrote `The Foundation Trilogy`?",
 		"answer": "Isaac Asimov",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "The phrase a `green-eyed monster` originated in which Shakespeare play?",
 		"answer": "Othello",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which book, written by Alice Walker, was made into a film starring Whoopi Goldberg?",
 		"answer": "The Colour Purple",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What is the name for the dot on the letter i?",
 		"answer": "A tittle",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In which Shakespeare play would you find the character Ophelia?",
 		"answer": "Hamlet",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In which novel would you find Jo, Beth, Meg and Amy?",
 		"answer": "Little Women",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who played Mr Darcy in the 1995 BBC adaptation of the Pride and Prejudice?",
 		"answer": "Colin Firth",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who is the hero in the best selling novel The Da Vinci Code?",
 		"answer": "Professor Robert Langdon",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What is A.A. Milne most famous for?",
 		"answer": "Being the creator/author of Winnie the Pooh.",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What is the last book in the Chronicles of Narnia by C.S. Lewis?",
 		"answer": "The Last Battle",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which author created Elinor Dashwood, Emma Woodhouse and Catherine Morland?",
 		"answer": "Jane Austen",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What do the initials J and K stand for in J.K. Rowling?",
 		"answer": "Joanne Kathleen",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who wrote War and Peace?",
 		"answer": "Leo Tolstoy",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who wrote the S.A.S. book `Who Dares Wins`?",
 		"answer": "Tony Geraghty",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who wrote `The Canterbury Tales`?",
 		"answer": "Geoffrey Chaucer",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In Charles Dickens `A Tale of Two Cities`, what were the two cities?",
 		"answer": "London and Paris",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "According to Bram Stoker`s original novel, by which seaside town did Count Dracula enter England?",
 		"answer": "Whitby",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who was the author of the book `The Constant Gardener`?",
 		"answer": "John Le Carre",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who is the author of the `Harry Potter` books?",
 		"answer": "J K Rowling",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who wrote the poem `The Owl and The Pussycat`?",
 		"answer": "Edward Lear",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Created in the 1930s and the subject of a 1975 film, which pulp hero was Lester Dent best known for creating?",
 		"answer": "Doc Savage",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which author created the character Harry Palmer, who was played on film by Michael Caine?",
 		"answer": "Len Deighton",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who wrote Moby Dick?",
 		"answer": "Herman Melville",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "if a picture is painted monochromatically how is it painted?",
 		"answer": "In black and white",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What was the name of the marooned mariner on `Treasure Island`?",
 		"answer": "Ben Gunn",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who was the only child vampire in Anne Rice`s novels?",
 		"answer": "Claudia",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which artist painted the famous `Sunflowers`?",
 		"answer": "Vincent Van Gogh",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "For which book is Richard Adams best known?",
 		"answer": "`Watership Down`",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What novel has the subtitle `The Modern Prometheus`?",
 		"answer": "Mary Shelley`s Frankenstein",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which famous writer, who used the line `God for Harry, England and St. George!` in one of his works, was said to have been born and died on St George`s Day?",
 		"answer": "William Shakespeare",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Nutwood Cottage is the home of which children`s storybook character?",
 		"answer": "Rupert Bear",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In which famous novel would you find Ralph, Simon and Piggy?",
 		"answer": "Lord of the Flies",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which two colours are Dennis the Menace`s jumper?",
 		"answer": "Red and Black",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What was the pen name of author Charles Ludwig Dodgson?",
 		"answer": "Lewis Carroll",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who wrote `Gullivers Travels`?",
 		"answer": "Jonathan Swift",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who painted The Laughing Cavalier?",
 		"answer": "Frans Hals",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "How much did the Owl and the Pussy Cat pay for their wedding ring?",
 		"answer": "One shilling",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who captained Jules Verne`s submarine `Nautilus`?",
 		"answer": "Captain Nemo",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who in the Beano comic was `your Redskin chum`?",
 		"answer": "Little Plum",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What is the name of the Orang-utan King in the 1967 film `The Jungle Book`?",
 		"answer": "King Louis",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "With whom was Adrian Mole madly in love?",
 		"answer": "Pandora",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In which country was Hamlet a prince?",
 		"answer": "Denmark",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What was the name of the first Harry Potter book?",
 		"answer": "Harry Potter and the Philosopher`s Stone",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What train would you find on platform 9 and three quarters at Kings Cross?",
 		"answer": "The Hogwarts Express",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which character from a famous poem brought a curse on his crew after killing an albatross?",
 		"answer": "The Ancient Mariner",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who painted the `Laughing Cavalier`?",
 		"answer": "Frans Hals",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What do the initials JRR stand for in JRR Tolkien`s name?",
 		"answer": "John Ronald Ruel",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which author created the character of Fantastic Mr Fox?",
 		"answer": "Roald Dahl",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
-		"question": "In Literature, how is the character of Oliver Mellors better known?",
+		"question": "In Literatur, how is the character of Oliver Mellors better known?",
 		"answer": "Lady Chatterly`s Lover",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What are elephants called in the `Winnie The Pooh` books?",
 		"answer": "Heffalumps",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In which English town was William Shakespeare born?",
 		"answer": "Stratford-Upon-Avon",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which artist had Blue and Rose periods?",
 		"answer": "Pablo Picasso",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "What was the first name of the fictional detective Miss Marple?",
 		"answer": "Jane",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In which Dickens novel would you find a convict called Magwitch?",
 		"answer": "Great Expectations",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "The author of `Dracula`, Bram Stoker`s first name is short for what?",
 		"answer": "Abraham",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In what city is the Uffizi Gallery?",
 		"answer": "Florence",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who won the Turner Prize in 2000?",
 		"answer": "Wolfgang Tillmans",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "In what year did Van Gough kill himself? 1830, 1860 or 1890?",
 		"answer": "1890",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Who painted `The Umbrellas`?",
 		"answer": "Renoir",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "Which philosopher wrote the book `Beyond Good and Evil`?",
 		"answer": "Friedrich Nietzsche",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
 		"question": "The works of Mrs Darrell Waters have been translated into 128 languages, but by which name is she better known?",
 		"answer": "Enid Blyton",
-		"category": "Art and Literature",
+		"category": "Art and Literatur",
 		"language": "en"
 	},
 	{
@@ -4786,5 +4786,19 @@ db.questions.insertMany([
 		"answer": "Lee",
 		"category": "Film and TV",
 		"language": "en"
+	},
+	{
+		"question": "Saint Bruno Bus",
+		"answer": "Yes",
+		"category": "Alstom",
+		"language": "en"
 	}
+	,
+	{
+		"question": "Saint Bruno Cantina",
+		"answer": "No",
+		"category": "Alstom",
+		"language": "en"
+	}
+
 ])

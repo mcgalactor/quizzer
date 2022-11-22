@@ -173,7 +173,7 @@ Room.methods.startRound = async function(categories) {
       return Promise.reject({ statusCode: 400, message: 'Round has already been started.' });
     }
 
-    if (categories.length !== 3) {
+    if (categories.length !== 1) {
       return Promise.reject({ statusCode: 400, message: 'Invalid amount of categories selected.' });
     }
 

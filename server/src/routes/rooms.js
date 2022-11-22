@@ -15,18 +15,17 @@ router.post(
   hasNotJoinedOrHosted,
   catchErrors(async (req, res) => {
     const { language } = req.body;
-
+    console.log(req.body);
     if (req.session.roomID) {
       await Room.updateOne({ _id: req.session.roomID, ended: false }, { ended: true });
     }
 
     req.session.role = QM;
     req.session.language = language;
-
+    //hack: generated room code is alsways 0000
     const newlyCreatedRoom = new Room({ code: generateRoomCode(), host: req.sessionID, language });
     await newlyCreatedRoom.save();
     req.session.roomID = newlyCreatedRoom._id;
-
     req.session.save(() => res.json({ roomCode: newlyCreatedRoom.code, language }));
   })
 );
@@ -98,7 +97,7 @@ router.patch(
     }
 
     if (roomClosed !== undefined) {
-      if (req.room.teams.length < 2 || req.room.teams.length > 6) {
+      if (req.room.teams.length < 1 || req.room.teams.length > 20) {
         return res.status(400).json({ message: 'Invalid amount of teams selected.' });
       }
       req.room.roomClosed = roomClosed;
@@ -150,8 +149,8 @@ router.post(
   hasNotJoinedOrHosted,
   catchErrors(async (req, res) => {
     const name = req.body.name.trim();
-    const team = req.body.team.trim();
-    console.log("name:"+ name + " team:" + team);
+    //const team = req.body.team.trim();
+    //console.log("name:"+ name + " team:" + team);
     const { roomClosed, teams, applications } = req.room;
 
     if (roomClosed) {

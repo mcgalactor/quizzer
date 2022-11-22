@@ -10,13 +10,13 @@ export const setRoom = (roomCode, language) => ({ type: 'SET_ROOM', roomCode, la
 export const clearRoomCode = () => ({ type: 'CLEAR_ROOM_CODE' });
 
 export const createRoom = lang => async dispatch => {
+  console.log("CreateRoom2");
   try {
     dispatch(setLoaderAction('Creating a room...'));
     dispatch(clearQuizzMaster());
-
+    
     const response = await fetchApiSendJson(`rooms`, 'POST', { language: lang });
     const { roomCode, language } = await checkFetchError(response);
-
     dispatch(wsConnect());
     dispatch(setRoom(roomCode, language));
   } catch (error) {

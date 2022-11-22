@@ -8,8 +8,10 @@ export const fetchCategories = () => async dispatch => {
   try {
     dispatch(setLoaderAction('Retrieving categories...'));
     const response = await fetchApi(`categories`);
+    console.log(response);
     const categories = await checkFetchError(response);
     dispatch({ type: 'CATEGORIES_FETCHED', categories });
+    console.log(categories);
   } catch (error) {
     dispatch(showPopUpAction('ERROR', error.message));
   } finally {

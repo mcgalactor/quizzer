@@ -8,6 +8,8 @@ import Input from './Input';
 import Button from './Button';
 
 const TeamRoom = () => {
+
+  console.log("isloading");
   const isLoading = useSelector(state => state.loader.active);
   const roomCode = useSelector(state => state.teamApp.roomCode.value);
   const teamID = useSelector(state => state.teamApp.teamID);

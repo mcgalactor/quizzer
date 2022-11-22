@@ -11,7 +11,7 @@ import RecoverButton from './RecoverButton';
 const App = () => {
   const crashed = useSelector(state => state.websocket.crashed);
   const popUpActive = useSelector(state => state.popUp.active);
-
+  console.log("test app");
   return (
     <Router>
       <Switch>
