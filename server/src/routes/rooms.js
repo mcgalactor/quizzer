@@ -45,7 +45,12 @@ router.use(
 
 router.get('/:roomCode', (req, res) => {
   const { round, questionNo, currentQuestion, questionClosed, teams, questionCompleted } = req.room;
-  const { category, question } = currentQuestion || {};
+  const { category, question,options,questiontype } = currentQuestion || {};
+  
+
+  console.log("server test");
+  console.log(JSON.stringify(options));
+
 
   switch (req.session.role) {
     case QM:
@@ -64,6 +69,8 @@ router.get('/:roomCode', (req, res) => {
         category,
         question,
         teamID: team._id,
+        options,
+        questiontype
       });
     case SCOREBOARD:
       const teamList = teams.map(({ name, roundPoints, roundScore, guessCorrect, guess }) => ({
@@ -308,7 +315,6 @@ router.put(
     const { question } = req.body;
 
     const { questionClosed, questionNo } = await req.room.startQuestion(question);
-
     res.json({ questionClosed, questionNo });
   })
 );

@@ -12,6 +12,9 @@ export const fetchQuestions = selectedCategories => async dispatch => {
         const response = await fetchApi(`categories/${category}/questions`);
         const questions = await checkFetchError(response);
         dispatch({ type: 'QUESTIONS_FETCHED', questions });
+        
+        //console.log("QUESTIONS_FETCHED" + questions);
+        //console.log(JSON.stringify(questions));
       })
     );
   } catch (error) {
@@ -30,6 +33,9 @@ export const confirmQuestionAndContinue = (roomCode, question) => async dispatch
     const { questionClosed, questionNo } = await checkFetchError(response);
 
     dispatch({ type: 'CONFIRM_QUESTION_SELECTED', question, questionClosed, questionNo });
+    
+    //console.log("CONFIRM_QUESTION_SELECTED" + question);
+    //console.log(JSON.stringify(question));
   } catch (error) {
     dispatch(showPopUpAction('ERROR', error.message));
   } finally {
@@ -41,10 +47,14 @@ export default produce((draft, action) => {
   switch (action.type) {
     case 'QUESTIONS_FETCHED':
       shuffle(action.questions);
+      //console.log("QUESTIONS_FETCHED" + action.questions);
+      //console.log(JSON.stringify(action.questions));
       draft.questions = [...draft.questions, ...action.questions];
+      //console.log(JSON.stringify(draft.questions));
       return;
     case 'ITEM_LIST_CHANGED_QUESTIONS':
       draft.selectedQuestion = action.value;
+      console.log(JSON.stringify(draft.selectedQuestion));
       return;
     case 'CLEAR_QUESTIONS':
       draft.questions = [];
@@ -55,6 +65,11 @@ export default produce((draft, action) => {
       draft.questionClosed = action.questionClosed;
       draft.question = action.questionNo;
       draft.selectedQuestion = null;
+      console.log(JSON.stringify(draft.currentQuestion));
+      console.log(JSON.stringify(draft.questionsAsked));
+      console.log(JSON.stringify(draft.questionClosed));
+      console.log(JSON.stringify(draft.question));
+      //console.log(JSON.stringify(draft.currentQuestion));
       return;
     default:
       return;

@@ -53,17 +53,15 @@ export const fetchRoom = roomCode => async dispatch => {
     dispatch(setLoaderAction('Loading question...'));
     console.log("fetchroom3");
     const response = await fetchApi(`rooms/${roomCode}`, 'GET');
-    console.log(response);
-
-    console.log("fetchroom4");
-    const { round, questionNo, questionClosed, category, question, teamID } = await checkFetchError(
+    
+    const { round, questionNo, questionClosed, category, question, teamID,questiontype,options } = await checkFetchError(
       response
     );
 
-    console.log(round +" "+ questionNo +" "+ questionClosed +" "+  category +" "+  question +" "+  teamID);
-    console.log("fetchroom5");
-    dispatch({ type: 'SET_ROOM', round, questionNo, questionClosed, category, question, teamID });
-    console.log("fetchroom6");
+    //console.log(round +" "+ questionNo +" "+ questionClosed +" "+  category +" "+  question +" "+  teamID);
+    console.log(questiontype);
+    dispatch({ type: 'SET_ROOM', round, questionNo, questionClosed, category, question, teamID,questiontype,options });
+    //console.log("fetchroom6");
   } catch (error) {
     dispatch(showPopUpAction('ERROR', error.message));
   } finally {
@@ -128,6 +126,11 @@ const teamAppReducer = produce(
         draft.question.open = !action.questionClosed;
         draft.question.category = action.category;
         draft.question.question = action.question;
+        console.log("question:" + action.question);
+        draft.question.questiontype = action.questiontype;
+        console.log("Type:" + action.questiontype);
+        draft.question.options = action.options;
+        console.log("options:" + action.options);
         draft.guess.value = '';
         draft.guess.valid = false;
         draft.teamID = action.teamID;
@@ -144,6 +147,8 @@ const teamAppReducer = produce(
         draft.question.open = false;
         draft.question.number = 0;
         draft.question.question = '';
+        draft.question.questiontype='';
+        draft.question.options = [];
         draft.question.category = '';
         draft.guess.value = '';
         draft.guess.valid = false;
@@ -170,8 +175,11 @@ const teamAppReducer = produce(
     question: {
       open: false,
       number: 0,
+      questiontype:'',
+      options:[],
       question: '',
       category: '',
+
     },
     guess: {
       value: '',

@@ -10,7 +10,7 @@ export const setRoom = (roomCode, language) => ({ type: 'SET_ROOM', roomCode, la
 export const clearRoomCode = () => ({ type: 'CLEAR_ROOM_CODE' });
 
 export const createRoom = lang => async dispatch => {
-  console.log("CreateRoom2");
+  //console.log("CreateRoom2");
   try {
     dispatch(setLoaderAction('Creating a room...'));
     dispatch(clearQuizzMaster());

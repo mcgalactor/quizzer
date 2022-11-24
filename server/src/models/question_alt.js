@@ -5,16 +5,8 @@ const Question = new mongoose.Schema({
     type: String,
     required: true,
   },
-  questiontype: {
-    type: String,
-    required: true,
-  },
-  options:{
-    type: Array,
-    required: true,
-  },
   answer: {
-    type: Number,
+    type: String,
     required: true,
   },
   category: {

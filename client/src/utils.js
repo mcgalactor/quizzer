@@ -17,6 +17,7 @@ export const fetchApi = (path, method = 'GET', opts = {}) => {
 };
 
 export const fetchApiSendJson = (path, method, data) => {
+  //console.log("fetch" + data);
   return fetchApi(path, method, {
     headers: {
       'Content-Type': 'application/json',
