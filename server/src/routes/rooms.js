@@ -104,7 +104,7 @@ router.patch(
     }
 
     if (roomClosed !== undefined) {
-      if (req.room.teams.length < 1 || req.room.teams.length > 20) {
+      if (req.room.teams.length < 1 || req.room.teams.length > 50) {
         return res.status(400).json({ message: 'Invalid amount of teams selected.' });
       }
       req.room.roomClosed = roomClosed;

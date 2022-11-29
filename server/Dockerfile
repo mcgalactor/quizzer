@@ -10,7 +10,8 @@ RUN mkdir /usr/src/app/node_modules/.cache && chmod -R 777 /usr/src/app/node_mod
 
 COPY . .
 
-ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.7.3/wait /wait
+#ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.7.3/wait /wait
+ADD ./wait /wait
 RUN chmod +x /wait
 
 EXPOSE 4000

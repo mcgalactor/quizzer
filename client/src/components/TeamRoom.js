@@ -34,14 +34,15 @@ const TeamRoom = () => {
       if (active!==0){
         dispatch(submitGuess(roomCode, teamID, active.toString()));
         console.log("handleSubmit:" +" "+  active);
+        setActive(0);
       }
     }
+
   };
 
   const handleChangeAnswer = () => {
     dispatch(stopLoaderAction());
   };
-//let active=0;
   const [active, setActive] = useState(0);
  
  
@@ -105,25 +106,6 @@ if (questiontype==="multi"){
         )
     };
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 };
 

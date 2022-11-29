@@ -88,7 +88,7 @@ const QMTeams = () => {
           <Button
             disabled={
               approvedTeamApplications.length < 1 ||
-              approveSelectedApplication.length >= 20 ||
+              approveSelectedApplication.length >= 50 ||
               roomClosed
             }
             onClick={() => dispatch(confirmTeamsAndContinue(code))}

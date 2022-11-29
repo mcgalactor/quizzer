@@ -287,11 +287,57 @@ const Guesses = () => {
         <TeamGuess team={0} />
         <TeamGuess team={1} />
         <TeamGuess team={2} />
-      </Row>
-      <Row className="top-anxiety">
         <TeamGuess team={3} />
         <TeamGuess team={4} />
         <TeamGuess team={5} />
+        <TeamGuess team={6} />
+        <TeamGuess team={7} />
+        <TeamGuess team={8} />
+        <TeamGuess team={9} />
+        <TeamGuess team={10} />
+        <TeamGuess team={11} />
+        <TeamGuess team={12} />
+        <TeamGuess team={13} />
+        <TeamGuess team={14} />
+        <TeamGuess team={15} />
+        <TeamGuess team={16} />
+        <TeamGuess team={17} />
+        <TeamGuess team={18} />
+        <TeamGuess team={19} />
+        <TeamGuess team={20} />
+      </Row>
+      <Row className="top-anxiety">
+
+        <TeamGuess team={21} />
+        <TeamGuess team={22} />
+        <TeamGuess team={23} />
+        <TeamGuess team={24} />
+        <TeamGuess team={25} />
+        <TeamGuess team={26} />
+        <TeamGuess team={27} />
+        <TeamGuess team={28} />
+        <TeamGuess team={29} />
+        <TeamGuess team={30} />
+        <TeamGuess team={31} />
+        <TeamGuess team={32} />
+        <TeamGuess team={33} />
+        <TeamGuess team={34} />
+        <TeamGuess team={35} />
+        <TeamGuess team={36} />
+        <TeamGuess team={37} />
+        <TeamGuess team={38} />
+        <TeamGuess team={39} />
+        <TeamGuess team={40} />
+        <TeamGuess team={41} />
+        <TeamGuess team={42} />
+        <TeamGuess team={43} />
+        <TeamGuess team={44} />
+        <TeamGuess team={45} />
+        <TeamGuess team={46} />
+        <TeamGuess team={47} />
+        <TeamGuess team={48} />
+        <TeamGuess team={49} />
+        <TeamGuess team={50} />
       </Row>
     </>
   );
@@ -345,7 +391,7 @@ const QMGuesses = () => {
 
   return (
     <Container className="top-anxiety">
-    <Score>+</Score>
+    <Score/>
       <Header />
       <Guesses />
       <NextButton />
