@@ -28,7 +28,8 @@ export default reduceReducers(
     currentQuestion: null,
     questionClosed: true,
     selectedQuestion: null,
-
+    guessStat:[0,0,0,0],
+    score:[0,0],
     approvingATeamGuess: false,
   },
   room,

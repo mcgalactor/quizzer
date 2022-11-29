@@ -7,10 +7,16 @@ import Team from './Team';
 import QM from './QM';
 import Scoreboard from './Scoreboard';
 import RecoverButton from './RecoverButton';
+import {useState} from 'react';
+
+
 
 const App = () => {
   const crashed = useSelector(state => state.websocket.crashed);
   const popUpActive = useSelector(state => state.popUp.active);
+  const [counter, setCounter] = useState(0);
+
+  
   console.log("test app");
   return (
     <Router>
@@ -30,6 +36,7 @@ const App = () => {
       </Switch>
       {crashed && <RecoverButton />}
       {popUpActive && <PopUp />}
+      
     </Router>
   );
 };

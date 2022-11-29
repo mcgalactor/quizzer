@@ -26,8 +26,16 @@ const TeamRoom = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = () => {
-    dispatch(submitGuess(roomCode, teamID, guess));
-    console.log("handleSubmit:" +" "+  active);
+    if (questiontype==="freetext"){
+      dispatch(submitGuess(roomCode, teamID, guess));
+      console.log("handleSubmit:" +" "+  active);
+    }
+    if (questiontype==="multi"){
+      if (active!==0){
+        dispatch(submitGuess(roomCode, teamID, active.toString()));
+        console.log("handleSubmit:" +" "+  active);
+      }
+    }
   };
 
   const handleChangeAnswer = () => {
@@ -39,11 +47,11 @@ const TeamRoom = () => {
  
   const handleClickAnswer = (id) => {
     setActive(id);
-    console.log("test" + test);
+    /*console.log("test" + test);
     console.log(JSON.stringify(test));
     console.log("change active to:" + " "+  active);
     console.log("questionstype:"+ questiontype2);
-    console.log("options:"+ options);   
+    console.log("options:"+ options);   */
   };
 
 
@@ -87,10 +95,11 @@ if (questiontype==="multi"){
         <span className="category">{category}</span>
         <span className="question">{question}</span>
         
-        <Button onClick={()=>handleClickAnswer(1)} style={{ backgroundColor: (active===1) ? "black" : "white" }}>{options[0]}</Button>
-        <Button onClick={()=>handleClickAnswer(2)} style={{ backgroundColor: (active===2) ? "black" : "white" }}>{options[1]}</Button>
-        <Button onClick={()=>handleClickAnswer(3)} style={{ backgroundColor: (active===3) ? "black" : "white" }}>{options[2]}</Button>
-        <Button onClick={()=>handleClickAnswer(4)} style={{ backgroundColor: (active===4) ? "black" : "white" }}>{options[3]}</Button>
+        <Button onClick={()=>handleClickAnswer(1)} style={{ backgroundColor: (active===1) ? "green" : "red" }}>{options[0]}</Button>
+        <Button onClick={()=>handleClickAnswer(2)} style={{ backgroundColor: (active===2) ? "green" : "red" }}>{options[1]}</Button>
+        <Button onClick={()=>handleClickAnswer(3)} style={{ backgroundColor: (active===3) ? "green" : "red" }}>{options[2]}</Button>
+        <Button onClick={()=>handleClickAnswer(4)} style={{ backgroundColor: (active===4) ? "green" : "red" }}>{options[3]}</Button>
+        <br/><br/><br/><br/>
         <Button onClick={handleSubmit}>Submit!</Button>
       </>
         )

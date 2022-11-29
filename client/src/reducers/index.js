@@ -6,6 +6,7 @@ import teamApp from './team-app';
 import scoreboard from './scoreboard';
 import quizzMasterApp from './qm';
 
+
 export default combineReducers({
   websocket,
   popUp,

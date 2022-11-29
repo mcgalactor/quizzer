@@ -7,10 +7,18 @@ import QMTeams from './QMTeams';
 import QMCategories from './QMCategories';
 import QMQuestions from './QMQuestions';
 import QMGuesses from './QMGuesses';
+import { useState } from 'react';
+
+
 
 const QM = ({ location: { pathname } }) => {
   const connected = useSelector(state => state.websocket.connected);
   console.log("Test World");
+  
+  
+  const [counter, setCounter] = useState(2);
+  
+  
   if (pathname !== '/master' && !connected) {
     return <Redirect to="/master" />;
   }

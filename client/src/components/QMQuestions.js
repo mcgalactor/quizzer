@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Container, Row, Col } from 'react-grid-system';
 import { Redirect } from 'react-router-dom';
 
-import { fetchQuestions, confirmQuestionAndContinue } from '../reducers/qm/question';
+import { fetchQuestions, confirmQuestionAndContinue,updateGuessStat,resetGuessStat } from '../reducers/qm/question';
 import Button from './Button';
 import ItemList from './ItemList';
 import ItemListHeader from './ItemListHeader';
@@ -15,6 +15,7 @@ const QMQuestions = () => {
   const isLoading = useSelector(state => state.loader.active);
   const code = useSelector(state => state.quizzMasterApp.roomCode);
   const roundNo = useSelector(state => state.quizzMasterApp.round);
+  const score=useSelector(state => state.quizzMasterApp.score);
   const questionNo = useSelector(state => state.quizzMasterApp.question);
   const selectedCategories = useSelector(state => state.quizzMasterApp.selectedCategories);
   const questions = useSelector(state => state.quizzMasterApp.questions);
