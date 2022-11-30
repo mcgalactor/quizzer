@@ -59,7 +59,7 @@ const QMQuestions = () => {
                     ? acc.concat({ id: cur._id, ...cur })
                     : acc;
                 }, [])
-                .slice(0, 5)}
+                .slice(0, 7)}
               show="question"
               selectable
               reducer={['quizzMasterApp', 'selectedQuestion']}

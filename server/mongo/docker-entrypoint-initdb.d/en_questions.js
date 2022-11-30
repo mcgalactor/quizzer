@@ -9,9 +9,9 @@ db.questions.insertMany([
 	}
 	,
 	{
-		"question": "What is the price for a meal in the cafeteria?",
+		"question": "What is the price for a meal in the cafeteria (including taxes)?",
 		"questiontype": "multi",
-		"options" : ["Ja","nein","vielleicht","auf jeden fAll"],
+		"options" : ["5.12 CAD","6.16 CAD","5.82 CAD","6.66 CAD"],
 		"answer": 2,
 		"category": "Alstom",
 		"language": "en"

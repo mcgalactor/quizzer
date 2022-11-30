@@ -68,6 +68,23 @@ const style3Normal = {
 };
 
 
+const styleBenhidden = {
+  //color: "green",
+  //background:  "#0f0",
+  display:'none',
+  fontSize: "32px",
+  //width:"10%",
+  textAlign:'center'
+};
+
+const styleBennormal = {
+  //color: "green",
+  //background:  "#0f0",
+  fontSize: "32px",
+  //width:"10%",
+  textAlign:'center'
+};
+
 
 const Header = () => {
    const showanswer = () => {
@@ -87,7 +104,7 @@ const Header = () => {
 
   
   const [reveal, setState] = useState(false);  
-  const buttonText=reveal?"Hide Answers":"Show Answers";
+  const buttonText=reveal?"Hide Answer":"Show Correct Answer";
   return (
     <Row>
       <Col xs={8} push={{ xs: 2 }} style={{ textAlign: 'center' }}>
@@ -117,6 +134,19 @@ const Header = () => {
 //<h2>Right Answer: {answer}</h2>
 const TeamGuess = ({ team: teamNo }) => {
   
+  const showanswer = () => {
+    if (revealBen){
+      setStateBen(false);
+    }else{
+      setStateBen(true);
+    }
+  }
+    const [revealBen, setStateBen] = useState(false);  
+    const buttonText=revealBen?"Hide Ben's answer":"Show Ben's answer";
+
+
+
+
   const { question, answer,questiontype} = useSelector(state => state.quizzMasterApp.currentQuestion);
   const dispatch = useDispatch();
   const roomCode = useSelector(state => state.quizzMasterApp.roomCode);
@@ -169,35 +199,21 @@ const TeamGuess = ({ team: teamNo }) => {
     return (      
       
       <Col>
-        <div className="team-guess">
-         
-        </div>
+       
       </Col>
     );
     }else{
       return(
       <Col>
-      <div className="team-guess">
-        <h3>{team.name}</h3>
-        <h3>{team.guess || '-'}</h3>
+      <div className="team-guess" border="1">
+        
+        <h1>Benoit</h1>
+        <div style={revealBen?styleBennormal:styleBenhidden}>
+        <h2>{team.guess || '-'}</h2>
+        </div>
+        <Button onClick={showanswer}>{buttonText}</Button>
 
-        {questionClosed && (
-          <Button type="small" onClick={toggleGuess} disabled={approvingATeamGuess || !team.guess}>
-            {
-            console.log("questiontype:" + questiontype)
-            
-            }          
-            {team.guessCorrect ? (
-              <span role="img" aria-label={`Approve team ${team.name}'s guess`}>
-                👍
-              </span>
-            ) : (
-              <span role="img" aria-label={`Reject team ${team.name}'s guess`}>
-                👎
-              </span>
-            )}
-          </Button>
-        )}
+       
       </div>
     </Col>
 
@@ -284,7 +300,7 @@ const Guesses = () => {
 
     <>
       <Row className="top-anxiety">
-        <TeamGuess team={0} />
+        <TeamGuess team={9} />
         <TeamGuess team={1} />
         <TeamGuess team={2} />
         <TeamGuess team={3} />
@@ -293,7 +309,7 @@ const Guesses = () => {
         <TeamGuess team={6} />
         <TeamGuess team={7} />
         <TeamGuess team={8} />
-        <TeamGuess team={9} />
+        <TeamGuess team={0} />
         <TeamGuess team={10} />
         <TeamGuess team={11} />
         <TeamGuess team={12} />
