@@ -1,0 +1,2 @@
+cp docker-compose.yml_hotspot docker-compose.yml
+cp ./client/.env.development_hotspot ./client/.env.development

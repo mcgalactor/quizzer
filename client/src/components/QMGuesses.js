@@ -113,10 +113,10 @@ const Header = () => {
         </h1>
         <h2>Question: {question}</h2>
         
-        <Answeroption style1={!(answer===1&&reveal)?style1Normal:style1Correct} style2={!(answer===1&&reveal)?styleNormal:styleCorrect} style3={!(answer===1&&reveal)?style3Normal:style3Correct} option={options[0]} optioncounter={guessStat[0]}>1</Answeroption>
-        <Answeroption style1={!(answer===2&&reveal)?style1Normal:style1Correct} style2={!(answer===2&&reveal)?styleNormal:styleCorrect} style3={!(answer===2&&reveal)?style3Normal:style3Correct} option={options[1]} optioncounter={guessStat[1]}>2</Answeroption>
-        <Answeroption style1={!(answer===3&&reveal)?style1Normal:style1Correct} style2={!(answer===3&&reveal)?styleNormal:styleCorrect} style3={!(answer===3&&reveal)?style3Normal:style3Correct} option={options[2]} optioncounter={guessStat[2]}>3</Answeroption>
-        <Answeroption style1={!(answer===4&&reveal)?style1Normal:style1Correct} style2={!(answer===4&&reveal)?styleNormal:styleCorrect} style3={!(answer===4&&reveal)?style3Normal:style3Correct} option={options[3]} optioncounter={guessStat[3]}>4</Answeroption>
+        <Answeroption style1={!(answer===1&&reveal)?style1Normal:style1Correct} style2={!(answer===1&&reveal)?styleNormal:styleCorrect} style3={!(answer===1&&reveal)?style3Normal:style3Correct} option={options[0]} optioncounter={guessStat[0]}>1: </Answeroption>
+        <Answeroption style1={!(answer===2&&reveal)?style1Normal:style1Correct} style2={!(answer===2&&reveal)?styleNormal:styleCorrect} style3={!(answer===2&&reveal)?style3Normal:style3Correct} option={options[1]} optioncounter={guessStat[1]}>2: </Answeroption>
+        <Answeroption style1={!(answer===3&&reveal)?style1Normal:style1Correct} style2={!(answer===3&&reveal)?styleNormal:styleCorrect} style3={!(answer===3&&reveal)?style3Normal:style3Correct} option={options[2]} optioncounter={guessStat[2]}>3: </Answeroption>
+        <Answeroption style1={!(answer===4&&reveal)?style1Normal:style1Correct} style2={!(answer===4&&reveal)?styleNormal:styleCorrect} style3={!(answer===4&&reveal)?style3Normal:style3Correct} option={options[3]} optioncounter={guessStat[3]}>4: </Answeroption>
         
        
         <Button onClick={showanswer}>{buttonText}</Button>

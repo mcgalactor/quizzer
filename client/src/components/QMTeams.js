@@ -73,7 +73,7 @@ const QMTeams = () => {
         </Col>
         <Col xs={middleWidth} className="button-stack">
           <Button
-            disabled={actionButtonsDisabled || approvedTeamApplications.length >= 6}
+            disabled={actionButtonsDisabled || approvedTeamApplications.length >= 50}
             onClick={() => dispatch(approveSelectedApplication(selectedTeamApplication, code))}
           >
             Approve team

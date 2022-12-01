@@ -1,0 +1,2 @@
+cp docker-compose.yml_handy docker-compose.yml
+cp ./client/.env.development_handy ./client/.env.development

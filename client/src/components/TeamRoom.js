@@ -96,10 +96,10 @@ if (questiontype==="multi"){
         <span className="category">{category}</span>
         <span className="question">{question}</span>
         
-        <Button onClick={()=>handleClickAnswer(1)} style={{ backgroundColor: (active===1) ? "green" : "red" }}>{options[0]}</Button>
-        <Button onClick={()=>handleClickAnswer(2)} style={{ backgroundColor: (active===2) ? "green" : "red" }}>{options[1]}</Button>
-        <Button onClick={()=>handleClickAnswer(3)} style={{ backgroundColor: (active===3) ? "green" : "red" }}>{options[2]}</Button>
-        <Button onClick={()=>handleClickAnswer(4)} style={{ backgroundColor: (active===4) ? "green" : "red" }}>{options[3]}</Button>
+        <Button onClick={()=>handleClickAnswer(1)} style={{ backgroundColor: (active===1) ? "blue" : "red" }}>{options[0]}</Button>
+        <Button onClick={()=>handleClickAnswer(2)} style={{ backgroundColor: (active===2) ? "blue" : "red" }}>{options[1]}</Button>
+        <Button onClick={()=>handleClickAnswer(3)} style={{ backgroundColor: (active===3) ? "blue" : "red" }}>{options[2]}</Button>
+        <Button onClick={()=>handleClickAnswer(4)} style={{ backgroundColor: (active===4) ? "blue" : "red" }}>{options[3]}</Button>
         <br/><br/><br/><br/>
         <Button onClick={handleSubmit}>Submit!</Button>
       </>

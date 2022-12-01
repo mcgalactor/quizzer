@@ -30,11 +30,11 @@ services:
       EXPRESS_PORT: 4000
       DB_NAME: quizzer
       #MONGODB_HOST: database
-      MONGODB_HOST: 192.168.243.178
+      MONGODB_HOST: 10.42.0.1
       #MONGODB_HOST: 192.168.1.182
       
       MONGODB_PORT: 27017
-      WAIT_HOSTS: 192.168.243.178:27017
+      WAIT_HOSTS: 10.42.0.1:27017
       #WAIT_HOSTS: database:27017
       #WAIT_HOSTS: 192.168.1.182:27017
   database:
