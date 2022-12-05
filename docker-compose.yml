@@ -1,40 +1,40 @@
 version: '3.7'
 
 services:
-  frontend:
-    build:
-      context: ./client
-      dockerfile: Dockerfile
-    ports:
-      - '3000:3000'
-    network_mode: "bridge"
-    volumes:
-      - ./client:/usr/src/app
-      - /usr/src/app/node_modules
+  #frontend:
+  #  build:
+  #    context: ./client
+  #    dockerfile: Dockerfile
+  #  ports:
+  #    - '3000:3000'
+  #  network_mode: "bridge"
+  #  volumes:
+  #    - ./client:/usr/src/app
+  #    - /usr/src/app/node_modules
   
-  backend:
-    restart: always
-    depends_on:
-      - database
-    build:
-      context: ./server
-      dockerfile: Dockerfile
-    ports:
-      - '4000:4000'
-    network_mode: "bridge"
-    volumes:
-      - ./server:/usr/src/app
-      - /usr/src/app/node_modules
-    env_file: ./server/.env
-    environment:
-      EXPRESS_PORT: 4000
-      DB_NAME: quizzer
-      #MONGODB_HOST: database
-      #MONGODB_HOST: localhost
-      MONGODB_HOST: 192.168.1.182
-      MONGODB_PORT: 27017
-      #WAIT_HOSTS: database:27017
-      WAIT_HOSTS: 192.168.1.182:27017
+  #backend:
+  #  restart: always
+  #  depends_on:
+  #    - database
+  #  build:
+  #    context: ./server
+  #    dockerfile: Dockerfile
+  #  ports:
+  #    - '4000:4000'
+  #  network_mode: "bridge"
+  #  volumes:
+  #    - ./server:/usr/src/app
+  #    - /usr/src/app/node_modules
+  #  env_file: ./server/.env
+  #  environment:
+  #    EXPRESS_PORT: 4000
+  #    DB_NAME: quizzer
+  #    #MONGODB_HOST: database
+  #    #MONGODB_HOST: localhost
+  #    MONGODB_HOST: 192.168.1.182
+  #    MONGODB_PORT: 27017
+  #    #WAIT_HOSTS: database:27017
+  #    WAIT_HOSTS: 192.168.1.182:27017
   database:
     image: mongo:4
     environment:
